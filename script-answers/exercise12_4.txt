@@ -1,0 +1,11 @@
+# from previous exercise, already started container with modified index.js
+# install node 
+curl -sL https://deb.nodesource.com/setup_20.x | bash
+apt install -y nodejs
+# install curl as well
+install apt-get -y install curl
+# run the app
+node /usr/src/app/index.js
+
+root@70ae5b17ef4a:/# node /usr/src/app/index.js
+Hello World

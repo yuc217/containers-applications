@@ -1,0 +1,16 @@
+# start docker daemon first; run the script to start the ubuntu container
+docker run -it ubuntu bash
+# create folder and file 
+mkdir -p /usr/src/app
+touch /usr/src/app/index.js
+exit
+
+# copy from terminal: 
+yuchencai ~ % docker run -it ubuntu bash
+root@70ae5b17ef4a:/# mkdir -p /usr/src/app
+root@70ae5b17ef4a:/# touch /usr/src/app/index.js
+root@70ae5b17ef4a:/# ls /usr/src/
+app
+root@70ae5b17ef4a:/# ls /usr/src/app
+index.js
+root@70ae5b17ef4a:/# exit

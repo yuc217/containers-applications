@@ -1,0 +1,5 @@
+# make redis data persist, add the line to docker compose yml file
+command: ['redis-server', '--appendonly', 'yes'] 
+
+docker compose -f docker-compose.dev.yml down
+docker compose -f docker-compose.dev.yml up

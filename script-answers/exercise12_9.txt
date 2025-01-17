@@ -1,0 +1,7 @@
+# add redis service to the docker dev file 
+# using port 6379 and start the container
+
+# start app
+REDIS_URL=redis://localhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev
+# to run it locally not in docker, need to use localhost 
+# now it shows correctly

@@ -1,0 +1,6 @@
+# create todo-app docker compose file for production
+# create nginx conf file
+# update dockerfile in frontend and backend
+# start the containers
+docker compose -f docker-compose.yml up
+# everything woking as expected

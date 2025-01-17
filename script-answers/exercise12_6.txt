@@ -1,0 +1,18 @@
+# create docker-compose.yml
+# run the app
+yuchencai todo-backend % docker compose up
+[+] Running 2/2
+ ✔ Network todo-backend_default  Created                                                                                       0.1s 
+ ✔ Container todo-backend-app-1  Created                                                                                       0.2s 
+Attaching to app-1
+app-1  | 
+app-1  | > todo-express-backend@0.0.0 start
+app-1  | > node ./bin/www
+app-1  | 
+app-1  | GET / 200 5.680 ms - 12
+app-1  | GET / 200 0.879 ms - 12
+app-1  | GET / 200 0.750 ms - 12
+app-1  | GET / 200 5.864 ms - 12
+app-1  | GET / 200 5.391 ms - 12
+app-1  | GET / 200 1.477 ms - 12
+app-1  | GET / 200 0.528 ms - 12

@@ -1,0 +1,65 @@
+# create Dockerfile and .dockerignore; folders like node_modules will not be copied to the image
+# start building the image
+docker build -t todo-app .
+# run the container
+docker run -p 3000:3000 todo-app
+# counter is incrementing correctly and showing /GET requests through bash
+# kill the process in another terminal 
+docker kill 45
+
+yuchencai todo-backend % docker build -t todo-app .
+[+] Building 215.8s (9/9) FINISHED                                                                             docker:desktop-linux
+ => [internal] load build definition from Dockerfile                                                                           0.1s
+ => => transferring dockerfile: 175B                                                                                           0.0s
+ => [internal] load metadata for docker.io/library/node:20                                                                     2.3s
+ => [internal] load .dockerignore                                                                                              0.0s
+ => => transferring context: 88B                                                                                               0.0s
+ => [1/4] FROM docker.io/library/node:20@sha256:968ca0550acc7589a8b1324401ec6e39ace53b2c82d2aed3a278e9ff491c2b1c             199.6s
+ => => resolve docker.io/library/node:20@sha256:968ca0550acc7589a8b1324401ec6e39ace53b2c82d2aed3a278e9ff491c2b1c               0.0s
+ => => sha256:21ce120df4188ccdd78b73a0f099045788b0055c84990f5a90905dc59e842dd7 2.49kB / 2.49kB                                 0.0s
+ => => sha256:fd0410a2d1aece5360035b61b0a60d8d6ce56badb9d30a5c86113b3ec724f72a 48.48MB / 48.48MB                              61.7s
+ => => sha256:bf571be90f05e10949e4ae13071c81d3182077d926e3f84169a12e0ce2aec209 24.06MB / 24.06MB                              24.1s
+ => => sha256:684a51896c8291a1769034cf6e10971c82a82c43b6b4588d1c71d215953eaa61 64.40MB / 64.40MB                              57.9s
+ => => sha256:968ca0550acc7589a8b1324401ec6e39ace53b2c82d2aed3a278e9ff491c2b1c 6.41kB / 6.41kB                                 0.0s
+ => => sha256:1bfdd50d7b339c2dc88b2c22dd1c04f2e55c7d50428f1bb70dc30f8700872871 6.39kB / 6.39kB                                 0.0s
+ => => sha256:fbf93b646d6b4d6612a25d50599f4d8e3c7785f83c6ba085219f9d4d334e8aa3 211.33MB / 211.33MB                           132.9s
+ => => sha256:961275e302a8f71d6d02ecee83fcddca4cabd3a055ee8039029bbf87f3bbcbb1 3.32kB / 3.32kB                                58.8s
+ => => sha256:dcbb6f7dd5c182f67921ac5810643df1074948375e332cfeec45ed6e23fd41e9 48.23MB / 48.23MB                              92.1s
+ => => sha256:9f0321332577c4970e399e19796f0ae37cbad0dee19aa17e9f6c2e6d6dc875b4 1.25MB / 1.25MB                                63.6s
+ => => extracting sha256:fd0410a2d1aece5360035b61b0a60d8d6ce56badb9d30a5c86113b3ec724f72a                                     14.3s
+ => => sha256:b1bde5b5e9987abdcb172cf5ffcf59153bd35583e93d2bc7e9b2e473e7bdad43 445B / 445B                                    63.8s
+ => => extracting sha256:bf571be90f05e10949e4ae13071c81d3182077d926e3f84169a12e0ce2aec209                                      3.9s
+ => => extracting sha256:684a51896c8291a1769034cf6e10971c82a82c43b6b4588d1c71d215953eaa61                                     29.2s
+ => => extracting sha256:fbf93b646d6b4d6612a25d50599f4d8e3c7785f83c6ba085219f9d4d334e8aa3                                     43.4s
+ => => extracting sha256:961275e302a8f71d6d02ecee83fcddca4cabd3a055ee8039029bbf87f3bbcbb1                                      0.0s
+ => => extracting sha256:dcbb6f7dd5c182f67921ac5810643df1074948375e332cfeec45ed6e23fd41e9                                     22.0s
+ => => extracting sha256:9f0321332577c4970e399e19796f0ae37cbad0dee19aa17e9f6c2e6d6dc875b4                                      0.1s
+ => => extracting sha256:b1bde5b5e9987abdcb172cf5ffcf59153bd35583e93d2bc7e9b2e473e7bdad43                                      0.0s
+ => [internal] load build context                                                                                              0.1s
+ => => transferring context: 51.76kB                                                                                           0.0s
+ => [2/4] WORKDIR /usr/src/app                                                                                                 2.1s
+ => [3/4] COPY . .                                                                                                             0.1s
+ => [4/4] RUN npm ci                                                                                                          10.5s
+ => exporting to image                                                                                                         0.6s
+ => => exporting layers                                                                                                        0.5s
+ => => writing image sha256:4e5187295d03dce0fdcafd4a45f287b09fb9db765f28f7af2f467f7369814e87                                   0.0s
+ => => naming to docker.io/library/todo-app                                                                                    0.0s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
+yuchencai todo-backend % docker run -p 3000:3000 todo-app    
+
+> todo-express-backend@0.0.0 start
+> node ./bin/www
+
+GET / 200 6.484 ms - 12
+GET / 200 15.559 ms - 12
+GET / 200 12.139 ms - 12
+GET / 200 60.567 ms - 12
+GET / 200 1.496 ms - 12
+
+yuchencai full-stack-proj % docker ps
+CONTAINER ID   IMAGE      COMMAND                  CREATED          STATUS          PORTS                    NAMES
+45db668565d2   todo-app   "docker-entrypoint.s…"   37 seconds ago   Up 31 seconds   0.0.0.0:3000->3000/tcp   sleepy_curie
+yuchencai full-stack-proj % docker kill 45
+45

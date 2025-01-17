@@ -1,0 +1,21 @@
+# create docker-compose.dev.yml for mongodb 
+# start the container 
+docker compose -f docker-compose.dev.yml up
+# start the app
+MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev
+# go to http://localhost:3000/todos
+# it shows todos
+
+# fixing (GET /todos/:id) (PUT /todos/:id) and still run it like before
+
+yuchencai todo-backend % MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev
+
+> todo-express-backend@0.0.0 dev
+> nodemon ./bin/www
+
+[nodemon] 2.0.22
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node ./bin/www`
+GET /todos 200 50.477 ms - 148

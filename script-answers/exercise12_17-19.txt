@@ -1,0 +1,12 @@
+# create nginx.dev.conf and another docker compose file
+todo-app
+├── todo-frontend
+├── todo-backend
+├── nginx.dev.conf
+└── docker-compose.dev.yml
+
+# add frontend and backend services to the file
+# update nginx conf file with /api/ and server:3000/, slash is necessary
+# update the backend url to 8080/api
+# start the containers
+# succesfully displaying info on 8080/api/todos

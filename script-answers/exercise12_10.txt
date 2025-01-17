@@ -1,0 +1,10 @@
+the http://localhost:3000/statistics now shows {"added_todos":3}
+only counts when new request are added, not counting the ones already there
+
+works the same by running:
+docker compose -f docker-compose.dev.yml up
+
+start the app:
+REDIS_URL=redis://localhost:6379 MONGO_URL=mongodb://the_username:the_password@localhost:3456/the_database npm run dev
+
+

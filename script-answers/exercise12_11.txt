@@ -1,0 +1,35 @@
+# connect to the redis Container
+docker exec -it todo-backend-redis-1 sh
+
+# start redis cli
+redis-cli
+
+# find all value
+keys *
+
+127.0.0.1:6379> keys *
+1) "added_todos"
+
+# find the value of the above key
+get added_todos
+
+127.0.0.1:6379> get added_todos
+"3"
+
+# set value of the counter to 9001
+set added_todos 9001
+
+127.0.0.1:6379> set added_todos 9001
+OK
+
+# its {"added_todos":9001} now, working as exptected
+
+# post two more todos, and check in redis again
+get added_todos
+"9003"
+
+# delete key from redis, and post another todo
+127.0.0.1:6379> del added_todos
+(integer) 1
+127.0.0.1:6379> get added_todos
+"1"

@@ -1,0 +1,5 @@
+# create dev.Dockerfile for backend
+# create dev yml file for backend
+# install nodemon in container
+# the url for mongodb needs to be updated, not using localhost anymore since it's in docker environment
+MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
