@@ -1,0 +1,13 @@
+# create dev files for development 
+# using part9 patientor app: https://github.com/yuc217/full-stack-proj/tree/main/part9
+# frontend: https://github.com/yuc217/full-stack-proj/tree/main/part9/patientor
+# backend: https://github.com/yuc217/full-stack-proj/tree/main/part9/backend-patientor
+
+# it's very important to configure the url for the backend right, and the port
+
+# create dockerfile and dev version dockerfiles
+# create docker compose files
+# start the app 
+docker-compose -f docker-compose.yml up --build
+# working correctly at http://localhost:8080/
+# backend can be accessible at 8080/api/api/ping
